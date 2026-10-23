@@ -1,0 +1,53 @@
+// Family tree as a DAG (parent -> child)
+// Render: dot -Tpng family.dot -o family.png
+digraph FamilyTree {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fontname="Helvetica"];
+  edge [arrowhead=none];
+
+  n1 [label="Arthur Anderson\n(1)", fillcolor="#ffd9b3", image="photos/arthur_anderson.jpg", labelloc="b"];
+  n2 [label="Beatrice Anderson\n(2)", fillcolor="#ffd9b3", image="photos/beatrice_anderson.jpg", labelloc="b"];
+  n3 [label="Charles Miller\n(3)", fillcolor="#ffd9b3", image="photos/charles_miller.jpg", labelloc="b"];
+  n4 [label="Dorothy Miller\n(4)", fillcolor="#ffd9b3", image="photos/dorothy_miller.jpg", labelloc="b"];
+  n5 [label="Edward Smith\n(5)", fillcolor="#ffd9b3", image="photos/edward_smith.jpg", labelloc="b"];
+  n6 [label="Frances Smith\n(6)", fillcolor="#ffd9b3", image="photos/frances_smith.jpg", labelloc="b"];
+  n7 [label="George Anderson\n(7)", fillcolor="#b3e6ff", image="photos/george_anderson.jpg", labelloc="b"];
+  n8 [label="Helen Anderson\n(8)", fillcolor="#b3e6ff", image="photos/helen_anderson.jpg", labelloc="b"];
+  n9 [label="Irene Miller\n(9)", fillcolor="#b3e6ff", image="photos/irene_miller.jpg", labelloc="b"];
+  n10 [label="Jack Smith\n(10)", fillcolor="#b3e6ff", image="photos/jack_smith.jpg", labelloc="b"];
+  n11 [label="Karen Smith\n(11)", fillcolor="#b3e6ff", image="photos/karen_smith.jpg", labelloc="b"];
+  n12 [label="Leo Anderson\n(12)", fillcolor="#c9f7c9", image="photos/leo_anderson.jpg", labelloc="b"];
+  n13 [label="Mia Anderson\n(13)", fillcolor="#c9f7c9", image="photos/mia_anderson.jpg", labelloc="b"];
+  n14 [label="Oscar Anderson\n(14)", fillcolor="#c9f7c9", image="photos/oscar_anderson.jpg", labelloc="b"];
+  n15 [label="Quentin Reed\n(15)", fillcolor="#c9f7c9", image="photos/quentin_reed.jpg", labelloc="b"];
+  n16 [label="Rachel Reed\n(16)", fillcolor="#c9f7c9", image="photos/rachel_reed.jpg", labelloc="b"];
+  n17 [label="Penelope Anderson\n(17)", fillcolor="#e6ccff", image="photos/penelope_anderson.jpg", labelloc="b"];
+  n18 [label="Samuel Anderson\n(18)", fillcolor="#e6ccff", image="photos/samuel_anderson.jpg", labelloc="b"];
+  n19 [label="Tara Anderson\n(19)", fillcolor="#e6ccff", image="photos/tara_anderson.jpg", labelloc="b"];
+
+  n1 -> n7;
+  n1 -> n8;
+  n2 -> n7;
+  n2 -> n8;
+  n3 -> n9;
+  n4 -> n9;
+  n5 -> n10;
+  n5 -> n11;
+  n6 -> n10;
+  n6 -> n11;
+  n7 -> n12;
+  n7 -> n13;
+  n7 -> n14;
+  n9 -> n12;
+  n9 -> n13;
+  n10 -> n15;
+  n10 -> n16;
+  n11 -> n15;
+  n11 -> n16;
+  n12 -> n17;
+  n13 -> n18;
+  n14 -> n19;
+  n15 -> n17;
+  n16 -> n18;
+  n16 -> n19;
+}
